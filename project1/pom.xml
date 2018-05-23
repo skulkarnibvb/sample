@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.kie.example</groupId>
   <artifactId>project1</artifactId>
-  <version>1.0.6-SNAPSHOT</version>
+  <version>1.0.7-SNAPSHOT</version>
   <repositories>
     <repository>
       <id>guvnor-m2-repo</id>

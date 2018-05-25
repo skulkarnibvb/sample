@@ -1,0 +1,14 @@
+
+<form id="1584383088">
+<property name="name" value="setvalue-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="0" name="toA" type="InputText" id="1064437650">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;Value (toA)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="Value"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<dataHolder inputId="Value" name="#FF54A7" type="basicType" outId="" value="java.lang.String" id="toA"/>
+</form>

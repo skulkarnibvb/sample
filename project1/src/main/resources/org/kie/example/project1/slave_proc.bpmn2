@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_cs7lIF_TEeiZX7-uM4us7w" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="6.2.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_Gj9GYF_UEeiZX7-uM4us7w" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="6.2.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
   <bpmn2:itemDefinition id="__valueItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_value_Item" structureRef="String"/>
   <bpmn2:process id="project1.slave_proc" drools:packageName="org.jbpm" drools:version="1.0" name="slave_proc" isExecutable="true">
@@ -19,7 +19,9 @@
           <drools:metaValue><![CDATA[Update something]]></drools:metaValue>
         </drools:metaData>
         <drools:onEntry-script scriptFormat="http://www.java.com/java">
-          <drools:script><![CDATA[System.out.println("---------------- You are entering the called process -----------------------\n PId: " + kcontext.getProcessInstance().getId());
+          <drools:script><![CDATA[System.out.println("---------------- You are entering the called process -----------------------
+ PId: " + kcontext.getProcessInstance().getId());
+
 
 
 
@@ -51,14 +53,15 @@ System.out.println("Current value of the variable value_: " + value_);
 
 
 
+
 ]]></drools:script>
         </drools:onExit-script>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_57B11CF1-B6C2-4CB5-BE30-9468233A1535</bpmn2:incoming>
       <bpmn2:outgoing>_79D4B37B-75E6-4401-AC67-5A7C3D54D6C5</bpmn2:outgoing>
-      <bpmn2:script><![CDATA[System.out.println("Signalling the parent process' 'Call Sub' , PId: " + kcontext.getProcessInstance().getParentProcessInstanceId());
+      <bpmn2:script><![CDATA[System.out.println("Signalling the parent process' 'Call Sub' , PP Id: " + kcontext.getProcessInstance().getParentProcessInstanceId() + ", P Id: " + kcontext.getProcessInstance().getId());
 
-kcontext.getKieRuntime().signalEvent("Call Sub", value_, kcontext.getProcessInstance().getParentProcessInstanceId());]]></bpmn2:script>
+kcontext.getKieRuntime().signalEvent("Call Sub", value_, kcontext.getProcessInstance().getId());]]></bpmn2:script>
     </bpmn2:scriptTask>
     <bpmn2:sequenceFlow id="_57B11CF1-B6C2-4CB5-BE30-9468233A1535" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="_BD8C3471-C792-4F8E-B75E-F907531DF521" targetRef="_04D75B4C-D064-459C-BB99-C3B69E3ABDFA"/>
     <bpmn2:sequenceFlow id="_79D4B37B-75E6-4401-AC67-5A7C3D54D6C5" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="_04D75B4C-D064-459C-BB99-C3B69E3ABDFA" targetRef="_09ED86AB-B8C0-4AEE-8E87-D1EC6E7971C5"/>
@@ -70,45 +73,45 @@ kcontext.getKieRuntime().signalEvent("Call Sub", value_, kcontext.getProcessInst
       </bpmn2:extensionElements>
       <bpmn2:incoming>_79D4B37B-75E6-4401-AC67-5A7C3D54D6C5</bpmn2:incoming>
       <bpmn2:dataInput id="_09ED86AB-B8C0-4AEE-8E87-D1EC6E7971C5_value_InputX" drools:dtype="String" name="value_"/>
-      <bpmn2:inputSet id="_cs8MMF_TEeiZX7-uM4us7w">
+      <bpmn2:inputSet id="_Gj9GYV_UEeiZX7-uM4us7w">
         <bpmn2:dataInputRefs>_09ED86AB-B8C0-4AEE-8E87-D1EC6E7971C5_value_InputX</bpmn2:dataInputRefs>
       </bpmn2:inputSet>
     </bpmn2:endEvent>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_cs8MMV_TEeiZX7-uM4us7w">
-    <bpmndi:BPMNPlane id="_cs8MMl_TEeiZX7-uM4us7w" bpmnElement="project1.slave_proc">
-      <bpmndi:BPMNShape id="_cs8MM1_TEeiZX7-uM4us7w" bpmnElement="processStartEvent">
+  <bpmndi:BPMNDiagram id="_Gj9GYl_UEeiZX7-uM4us7w">
+    <bpmndi:BPMNPlane id="_Gj9GY1_UEeiZX7-uM4us7w" bpmnElement="project1.slave_proc">
+      <bpmndi:BPMNShape id="_Gj9GZF_UEeiZX7-uM4us7w" bpmnElement="processStartEvent">
         <dc:Bounds height="30.0" width="30.0" x="120.0" y="165.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_cs8MNF_TEeiZX7-uM4us7w" bpmnElement="_BD8C3471-C792-4F8E-B75E-F907531DF521">
+      <bpmndi:BPMNShape id="_Gj9GZV_UEeiZX7-uM4us7w" bpmnElement="_BD8C3471-C792-4F8E-B75E-F907531DF521">
         <dc:Bounds height="80.0" width="100.0" x="195.0" y="135.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_cs8MNV_TEeiZX7-uM4us7w" bpmnElement="_04D75B4C-D064-459C-BB99-C3B69E3ABDFA">
+      <bpmndi:BPMNShape id="_Gj9GZl_UEeiZX7-uM4us7w" bpmnElement="_04D75B4C-D064-459C-BB99-C3B69E3ABDFA">
         <dc:Bounds height="80.0" width="100.0" x="360.0" y="135.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_cs8MNl_TEeiZX7-uM4us7w" bpmnElement="_09ED86AB-B8C0-4AEE-8E87-D1EC6E7971C5">
+      <bpmndi:BPMNShape id="_Gj9GZ1_UEeiZX7-uM4us7w" bpmnElement="_09ED86AB-B8C0-4AEE-8E87-D1EC6E7971C5">
         <dc:Bounds height="28.0" width="28.0" x="540.0" y="161.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="_cs8MN1_TEeiZX7-uM4us7w" bpmnElement="_E4E4E448-295F-4EF8-A3D9-705E85EBA58A" sourceElement="_cs8MM1_TEeiZX7-uM4us7w" targetElement="_cs8MNF_TEeiZX7-uM4us7w">
+      <bpmndi:BPMNEdge id="_Gj9GaF_UEeiZX7-uM4us7w" bpmnElement="_E4E4E448-295F-4EF8-A3D9-705E85EBA58A" sourceElement="_Gj9GZF_UEeiZX7-uM4us7w" targetElement="_Gj9GZV_UEeiZX7-uM4us7w">
         <di:waypoint xsi:type="dc:Point" x="135.0" y="180.0"/>
         <di:waypoint xsi:type="dc:Point" x="245.0" y="175.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_cs8MOF_TEeiZX7-uM4us7w" bpmnElement="_57B11CF1-B6C2-4CB5-BE30-9468233A1535" sourceElement="_cs8MNF_TEeiZX7-uM4us7w" targetElement="_cs8MNV_TEeiZX7-uM4us7w">
+      <bpmndi:BPMNEdge id="_Gj9GaV_UEeiZX7-uM4us7w" bpmnElement="_57B11CF1-B6C2-4CB5-BE30-9468233A1535" sourceElement="_Gj9GZV_UEeiZX7-uM4us7w" targetElement="_Gj9GZl_UEeiZX7-uM4us7w">
         <di:waypoint xsi:type="dc:Point" x="245.0" y="175.0"/>
         <di:waypoint xsi:type="dc:Point" x="410.0" y="175.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_cs8MOV_TEeiZX7-uM4us7w" bpmnElement="_79D4B37B-75E6-4401-AC67-5A7C3D54D6C5" sourceElement="_cs8MNV_TEeiZX7-uM4us7w" targetElement="_cs8MNl_TEeiZX7-uM4us7w">
+      <bpmndi:BPMNEdge id="_Gj9Gal_UEeiZX7-uM4us7w" bpmnElement="_79D4B37B-75E6-4401-AC67-5A7C3D54D6C5" sourceElement="_Gj9GZl_UEeiZX7-uM4us7w" targetElement="_Gj9GZ1_UEeiZX7-uM4us7w">
         <di:waypoint xsi:type="dc:Point" x="410.0" y="175.0"/>
         <di:waypoint xsi:type="dc:Point" x="554.0" y="175.0"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_cs8MOl_TEeiZX7-uM4us7w" type="BPSimData">
+  <bpmn2:relationship id="_Gj9Ga1_UEeiZX7-uM4us7w" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters" baseTimeUnit="min"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_04D75B4C-D064-459C-BB99-C3B69E3ABDFA" id="_cs8MO1_TEeiZX7-uM4us7w">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_04D75B4C-D064-459C-BB99-C3B69E3ABDFA" id="_Gj9GbF_UEeiZX7-uM4us7w">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -120,7 +123,7 @@ kcontext.getKieRuntime().signalEvent("Call Sub", value_, kcontext.getProcessInst
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_BD8C3471-C792-4F8E-B75E-F907531DF521" id="_cs8MPF_TEeiZX7-uM4us7w">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_BD8C3471-C792-4F8E-B75E-F907531DF521" id="_Gj9GbV_UEeiZX7-uM4us7w">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -132,35 +135,35 @@ kcontext.getKieRuntime().signalEvent("Call Sub", value_, kcontext.getProcessInst
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_E4E4E448-295F-4EF8-A3D9-705E85EBA58A" id="_cs8MPV_TEeiZX7-uM4us7w">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_E4E4E448-295F-4EF8-A3D9-705E85EBA58A" id="_Gj9Gbl_UEeiZX7-uM4us7w">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_79D4B37B-75E6-4401-AC67-5A7C3D54D6C5" id="_cs8MPl_TEeiZX7-uM4us7w">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_79D4B37B-75E6-4401-AC67-5A7C3D54D6C5" id="_Gj9Gb1_UEeiZX7-uM4us7w">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_57B11CF1-B6C2-4CB5-BE30-9468233A1535" id="_cs8MP1_TEeiZX7-uM4us7w">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_57B11CF1-B6C2-4CB5-BE30-9468233A1535" id="_Gj9GcF_UEeiZX7-uM4us7w">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_09ED86AB-B8C0-4AEE-8E87-D1EC6E7971C5" id="_cs8MQF_TEeiZX7-uM4us7w">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_09ED86AB-B8C0-4AEE-8E87-D1EC6E7971C5" id="_Gj9GcV_UEeiZX7-uM4us7w">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
               </bpsim:ProcessingTime>
             </bpsim:TimeParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="processStartEvent" id="_cs8MQV_TEeiZX7-uM4us7w">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="processStartEvent" id="_Gj9Gcl_UEeiZX7-uM4us7w">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -175,7 +178,7 @@ kcontext.getKieRuntime().signalEvent("Call Sub", value_, kcontext.getProcessInst
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_cs7lIF_TEeiZX7-uM4us7w</bpmn2:source>
-    <bpmn2:target>_cs7lIF_TEeiZX7-uM4us7w</bpmn2:target>
+    <bpmn2:source>_Gj9GYF_UEeiZX7-uM4us7w</bpmn2:source>
+    <bpmn2:target>_Gj9GYF_UEeiZX7-uM4us7w</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>

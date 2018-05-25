@@ -1,0 +1,22 @@
+
+<form id="187690354">
+<property name="name" value="updater-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="0" name="_value" type="InputText" id="1605483941">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;_1_val (_value)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="_1_val"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="1" name="value_" type="InputText" id="331861562">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;val_1_ (value_)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="val_1_"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<dataHolder inputId="_1_val" name="#E9E371" type="basicType" outId="" value="java.lang.String" id="_value"/>
+<dataHolder inputId="" name="#FF54A7" type="basicType" outId="val_1_" value="java.lang.String" id="value_"/>
+</form>

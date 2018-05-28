@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>example</groupId>
   <artifactId>Sigsam</artifactId>
-  <version>0.0.7</version>
+  <version>0.0.8</version>
   <packaging>kjar</packaging>
   <name>Sigsam</name>
   <description>Sample for signal check</description>

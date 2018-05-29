@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_jlXdsGMiEei2otS7nFZu9g" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="6.2.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_LiTQ0GMjEei2otS7nFZu9g" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="6.2.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
   <bpmn2:itemDefinition id="_incDItem" structureRef="example.sigsam.Holder"/>
   <bpmn2:itemDefinition id="_aItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_invItem" structureRef="String"/>
@@ -101,9 +101,9 @@ System.out.println("Main process, value of a,incD(you filled a, we filled incD):
       </bpmn2:extensionElements>
       <bpmn2:incoming>_8160051C-4107-416D-9453-8A7A6BE1156D</bpmn2:incoming>
       <bpmn2:outgoing>_261CD404-EFFA-4BAA-8033-A3865916E76E</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_jlYEwGMiEei2otS7nFZu9g">
-        <bpmn2:inputSet id="_jlYEwWMiEei2otS7nFZu9g"/>
-        <bpmn2:outputSet id="_jlYEwmMiEei2otS7nFZu9g"/>
+      <bpmn2:ioSpecification id="_LiTQ0WMjEei2otS7nFZu9g">
+        <bpmn2:inputSet id="_LiTQ0mMjEei2otS7nFZu9g"/>
+        <bpmn2:outputSet id="_LiTQ02MjEei2otS7nFZu9g"/>
       </bpmn2:ioSpecification>
       <bpmn2:callActivity id="_9BF15630-A314-4754-B1BD-C49BC2450242" drools:selectable="true" drools:independent="true" drools:waitForCompletion="true" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Fork Child" calledElement="Sigsam.secondary">
         <bpmn2:extensionElements>
@@ -111,32 +111,32 @@ System.out.println("Main process, value of a,incD(you filled a, we filled incD):
             <drools:metaValue><![CDATA[Fork Child]]></drools:metaValue>
           </drools:metaData>
           <drools:onEntry-script scriptFormat="http://www.java.com/java">
-            <drools:script><![CDATA[System.out.print("Entering Fork Child, value in incD: " + incD.getValue());
+            <drools:script><![CDATA[System.out.println("Entering Fork Child, value in incD: " + incD.getValue());
 ]]></drools:script>
           </drools:onEntry-script>
         </bpmn2:extensionElements>
         <bpmn2:outgoing>_6A87997D-F2C6-4D28-AEF2-AF99D4518ECF</bpmn2:outgoing>
-        <bpmn2:ioSpecification id="_jlYEw2MiEei2otS7nFZu9g">
+        <bpmn2:ioSpecification id="_LiTQ1GMjEei2otS7nFZu9g">
           <bpmn2:dataInput id="_9BF15630-A314-4754-B1BD-C49BC2450242_fromAInputX" drools:dtype="example.sigsam.Holder" name="fromA"/>
           <bpmn2:dataOutput id="_9BF15630-A314-4754-B1BD-C49BC2450242_outCDOutputX" drools:dtype="example.sigsam.Holder" name="outCD"/>
           <bpmn2:dataOutput id="_9BF15630-A314-4754-B1BD-C49BC2450242_outOutputX" drools:dtype="String" name="out"/>
-          <bpmn2:inputSet id="_jlYExGMiEei2otS7nFZu9g">
+          <bpmn2:inputSet id="_LiTQ1WMjEei2otS7nFZu9g">
             <bpmn2:dataInputRefs>_9BF15630-A314-4754-B1BD-C49BC2450242_fromAInputX</bpmn2:dataInputRefs>
           </bpmn2:inputSet>
-          <bpmn2:outputSet id="_jlYExWMiEei2otS7nFZu9g">
+          <bpmn2:outputSet id="_LiTQ1mMjEei2otS7nFZu9g">
             <bpmn2:dataOutputRefs>_9BF15630-A314-4754-B1BD-C49BC2450242_outCDOutputX</bpmn2:dataOutputRefs>
             <bpmn2:dataOutputRefs>_9BF15630-A314-4754-B1BD-C49BC2450242_outOutputX</bpmn2:dataOutputRefs>
           </bpmn2:outputSet>
         </bpmn2:ioSpecification>
-        <bpmn2:dataInputAssociation id="_jlYExmMiEei2otS7nFZu9g">
+        <bpmn2:dataInputAssociation id="_LiTQ12MjEei2otS7nFZu9g">
           <bpmn2:sourceRef>incD</bpmn2:sourceRef>
           <bpmn2:targetRef>_9BF15630-A314-4754-B1BD-C49BC2450242_fromAInputX</bpmn2:targetRef>
         </bpmn2:dataInputAssociation>
-        <bpmn2:dataOutputAssociation id="_jlYEx2MiEei2otS7nFZu9g">
+        <bpmn2:dataOutputAssociation id="_LiTQ2GMjEei2otS7nFZu9g">
           <bpmn2:sourceRef>_9BF15630-A314-4754-B1BD-C49BC2450242_outCDOutputX</bpmn2:sourceRef>
           <bpmn2:targetRef>incD</bpmn2:targetRef>
         </bpmn2:dataOutputAssociation>
-        <bpmn2:dataOutputAssociation id="_jlYEyGMiEei2otS7nFZu9g">
+        <bpmn2:dataOutputAssociation id="_LiTQ2WMjEei2otS7nFZu9g">
           <bpmn2:sourceRef>_9BF15630-A314-4754-B1BD-C49BC2450242_outOutputX</bpmn2:sourceRef>
           <bpmn2:targetRef>inv</bpmn2:targetRef>
         </bpmn2:dataOutputAssociation>
@@ -150,7 +150,7 @@ System.out.println("Main process, value of a,incD(you filled a, we filled incD):
         <bpmn2:incoming>_6A87997D-F2C6-4D28-AEF2-AF99D4518ECF</bpmn2:incoming>
       </bpmn2:endEvent>
       <bpmn2:sequenceFlow id="_6A87997D-F2C6-4D28-AEF2-AF99D4518ECF" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="_9BF15630-A314-4754-B1BD-C49BC2450242" targetRef="_73D6F69D-2BD1-4CDB-9905-8724FA1D4EC4"/>
-      <bpmn2:completionCondition xsi:type="bpmn2:tFormalExpression" id="_jlYEyWMiEei2otS7nFZu9g"><![CDATA[2==3]]></bpmn2:completionCondition>
+      <bpmn2:completionCondition xsi:type="bpmn2:tFormalExpression" id="_LiTQ2mMjEei2otS7nFZu9g"><![CDATA[2==3]]></bpmn2:completionCondition>
     </bpmn2:adHocSubProcess>
     <bpmn2:endEvent id="_E7A8194F-C172-410E-BAA2-3D0E00E8FF19" drools:selectable="true" color:background-color="#ff6347" color:border-color="#000000" color:color="#000000" name="end">
       <bpmn2:extensionElements>
@@ -163,57 +163,57 @@ System.out.println("Main process, value of a,incD(you filled a, we filled incD):
     <bpmn2:sequenceFlow id="_261CD404-EFFA-4BAA-8033-A3865916E76E" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="_9D2142B6-64EB-4A5A-8862-11CA377C30F7" targetRef="_E7A8194F-C172-410E-BAA2-3D0E00E8FF19"/>
     <bpmn2:sequenceFlow id="_8160051C-4107-416D-9453-8A7A6BE1156D" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="_0CAC7643-E49B-4C32-AB52-D95581DFF4A1" targetRef="_9D2142B6-64EB-4A5A-8862-11CA377C30F7"/>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_jlYEymMiEei2otS7nFZu9g">
-    <bpmndi:BPMNPlane id="_jlYEy2MiEei2otS7nFZu9g" bpmnElement="Sigsam.primary">
-      <bpmndi:BPMNShape id="_jlYEzGMiEei2otS7nFZu9g" bpmnElement="_9D2142B6-64EB-4A5A-8862-11CA377C30F7">
+  <bpmndi:BPMNDiagram id="_LiTQ22MjEei2otS7nFZu9g">
+    <bpmndi:BPMNPlane id="_LiTQ3GMjEei2otS7nFZu9g" bpmnElement="Sigsam.primary">
+      <bpmndi:BPMNShape id="_LiTQ3WMjEei2otS7nFZu9g" bpmnElement="_9D2142B6-64EB-4A5A-8862-11CA377C30F7">
         <dc:Bounds height="160.0" width="200.0" x="330.0" y="108.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_jlYEzWMiEei2otS7nFZu9g" bpmnElement="_83EF2ABA-FE90-4710-810B-218E89C98BCB">
+      <bpmndi:BPMNShape id="_LiTQ3mMjEei2otS7nFZu9g" bpmnElement="_83EF2ABA-FE90-4710-810B-218E89C98BCB">
         <dc:Bounds height="30.0" width="30.0" x="112.0" y="173.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_jlYEzmMiEei2otS7nFZu9g" bpmnElement="_0CAC7643-E49B-4C32-AB52-D95581DFF4A1">
+      <bpmndi:BPMNShape id="_LiTQ32MjEei2otS7nFZu9g" bpmnElement="_0CAC7643-E49B-4C32-AB52-D95581DFF4A1">
         <dc:Bounds height="80.0" width="100.0" x="187.0" y="148.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_jlYEz2MiEei2otS7nFZu9g" bpmnElement="_9BF15630-A314-4754-B1BD-C49BC2450242">
+      <bpmndi:BPMNShape id="_LiTQ4GMjEei2otS7nFZu9g" bpmnElement="_9BF15630-A314-4754-B1BD-C49BC2450242">
         <dc:Bounds height="80.0" width="100.0" x="344.0" y="160.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_jlYE0GMiEei2otS7nFZu9g" bpmnElement="_73D6F69D-2BD1-4CDB-9905-8724FA1D4EC4">
+      <bpmndi:BPMNShape id="_LiTQ4WMjEei2otS7nFZu9g" bpmnElement="_73D6F69D-2BD1-4CDB-9905-8724FA1D4EC4">
         <dc:Bounds height="28.0" width="28.0" x="479.0" y="186.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_jlYE0WMiEei2otS7nFZu9g" bpmnElement="_E7A8194F-C172-410E-BAA2-3D0E00E8FF19">
+      <bpmndi:BPMNShape id="_LiTQ4mMjEei2otS7nFZu9g" bpmnElement="_E7A8194F-C172-410E-BAA2-3D0E00E8FF19">
         <dc:Bounds height="28.0" width="28.0" x="575.0" y="174.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="_jlYE0mMiEei2otS7nFZu9g" bpmnElement="_60AEC62E-0E24-4ECE-BBD4-85616EFC5CD6" sourceElement="_jlYEzWMiEei2otS7nFZu9g" targetElement="_jlYEzmMiEei2otS7nFZu9g">
+      <bpmndi:BPMNEdge id="_LiTQ42MjEei2otS7nFZu9g" bpmnElement="_60AEC62E-0E24-4ECE-BBD4-85616EFC5CD6" sourceElement="_LiTQ3mMjEei2otS7nFZu9g" targetElement="_LiTQ32MjEei2otS7nFZu9g">
         <di:waypoint xsi:type="dc:Point" x="127.0" y="188.0"/>
         <di:waypoint xsi:type="dc:Point" x="237.0" y="188.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_jlYE02MiEei2otS7nFZu9g" bpmnElement="_6A87997D-F2C6-4D28-AEF2-AF99D4518ECF" sourceElement="_jlYEz2MiEei2otS7nFZu9g" targetElement="_jlYE0GMiEei2otS7nFZu9g">
+      <bpmndi:BPMNEdge id="_LiTQ5GMjEei2otS7nFZu9g" bpmnElement="_6A87997D-F2C6-4D28-AEF2-AF99D4518ECF" sourceElement="_LiTQ4GMjEei2otS7nFZu9g" targetElement="_LiTQ4WMjEei2otS7nFZu9g">
         <di:waypoint xsi:type="dc:Point" x="444.0" y="200.0"/>
         <di:waypoint xsi:type="dc:Point" x="479.0" y="200.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_jlYE1GMiEei2otS7nFZu9g" bpmnElement="_261CD404-EFFA-4BAA-8033-A3865916E76E" sourceElement="_jlYEzGMiEei2otS7nFZu9g" targetElement="_jlYE0WMiEei2otS7nFZu9g">
+      <bpmndi:BPMNEdge id="_LiTQ5WMjEei2otS7nFZu9g" bpmnElement="_261CD404-EFFA-4BAA-8033-A3865916E76E" sourceElement="_LiTQ3WMjEei2otS7nFZu9g" targetElement="_LiTQ4mMjEei2otS7nFZu9g">
         <di:waypoint xsi:type="dc:Point" x="430.0" y="188.0"/>
         <di:waypoint xsi:type="dc:Point" x="589.0" y="188.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_jlYE1WMiEei2otS7nFZu9g" bpmnElement="_8160051C-4107-416D-9453-8A7A6BE1156D" sourceElement="_jlYEzmMiEei2otS7nFZu9g" targetElement="_jlYEzGMiEei2otS7nFZu9g">
+      <bpmndi:BPMNEdge id="_LiTQ5mMjEei2otS7nFZu9g" bpmnElement="_8160051C-4107-416D-9453-8A7A6BE1156D" sourceElement="_LiTQ32MjEei2otS7nFZu9g" targetElement="_LiTQ3WMjEei2otS7nFZu9g">
         <di:waypoint xsi:type="dc:Point" x="237.0" y="188.0"/>
         <di:waypoint xsi:type="dc:Point" x="430.0" y="188.0"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_jlYE1mMiEei2otS7nFZu9g" type="BPSimData">
+  <bpmn2:relationship id="_LiTQ52MjEei2otS7nFZu9g" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters" baseTimeUnit="min"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_73D6F69D-2BD1-4CDB-9905-8724FA1D4EC4" id="_jlYE12MiEei2otS7nFZu9g">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_73D6F69D-2BD1-4CDB-9905-8724FA1D4EC4" id="_LiTQ6GMjEei2otS7nFZu9g">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
               </bpsim:ProcessingTime>
             </bpsim:TimeParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_83EF2ABA-FE90-4710-810B-218E89C98BCB" id="_jlYE2GMiEei2otS7nFZu9g">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_83EF2ABA-FE90-4710-810B-218E89C98BCB" id="_LiTQ6WMjEei2otS7nFZu9g">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -225,47 +225,35 @@ System.out.println("Main process, value of a,incD(you filled a, we filled incD):
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_8160051C-4107-416D-9453-8A7A6BE1156D" id="_jlYE2WMiEei2otS7nFZu9g">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_8160051C-4107-416D-9453-8A7A6BE1156D" id="_LiTQ6mMjEei2otS7nFZu9g">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_6A87997D-F2C6-4D28-AEF2-AF99D4518ECF" id="_jlYE2mMiEei2otS7nFZu9g">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_6A87997D-F2C6-4D28-AEF2-AF99D4518ECF" id="_LiTQ62MjEei2otS7nFZu9g">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_261CD404-EFFA-4BAA-8033-A3865916E76E" id="_jlYE22MiEei2otS7nFZu9g">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_261CD404-EFFA-4BAA-8033-A3865916E76E" id="_LiTQ7GMjEei2otS7nFZu9g">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_60AEC62E-0E24-4ECE-BBD4-85616EFC5CD6" id="_jlYE3GMiEei2otS7nFZu9g">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_60AEC62E-0E24-4ECE-BBD4-85616EFC5CD6" id="_LiTQ7WMjEei2otS7nFZu9g">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_9D2142B6-64EB-4A5A-8862-11CA377C30F7" id="_jlYE3WMiEei2otS7nFZu9g">
-            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
-              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
-                <bpsim:UniformDistribution max="10.0" min="5.0"/>
-              </bpsim:ProcessingTime>
-            </bpsim:TimeParameters>
-            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
-              <bpsim:UnitCost xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="0.0"/>
-              </bpsim:UnitCost>
-            </bpsim:CostParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_9BF15630-A314-4754-B1BD-C49BC2450242" id="_jlYE3mMiEei2otS7nFZu9g">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_9D2142B6-64EB-4A5A-8862-11CA377C30F7" id="_LiTQ7mMjEei2otS7nFZu9g">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -277,14 +265,26 @@ System.out.println("Main process, value of a,incD(you filled a, we filled incD):
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_E7A8194F-C172-410E-BAA2-3D0E00E8FF19" id="_jlYr0GMiEei2otS7nFZu9g">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_9BF15630-A314-4754-B1BD-C49BC2450242" id="_LiTQ72MjEei2otS7nFZu9g">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_E7A8194F-C172-410E-BAA2-3D0E00E8FF19" id="_LiTQ8GMjEei2otS7nFZu9g">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
               </bpsim:ProcessingTime>
             </bpsim:TimeParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_0CAC7643-E49B-4C32-AB52-D95581DFF4A1" id="_jlYr0WMiEei2otS7nFZu9g">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_0CAC7643-E49B-4C32-AB52-D95581DFF4A1" id="_LiTQ8WMjEei2otS7nFZu9g">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -299,7 +299,7 @@ System.out.println("Main process, value of a,incD(you filled a, we filled incD):
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_jlXdsGMiEei2otS7nFZu9g</bpmn2:source>
-    <bpmn2:target>_jlXdsGMiEei2otS7nFZu9g</bpmn2:target>
+    <bpmn2:source>_LiTQ0GMjEei2otS7nFZu9g</bpmn2:source>
+    <bpmn2:target>_LiTQ0GMjEei2otS7nFZu9g</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>

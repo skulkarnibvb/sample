@@ -5,5 +5,9 @@ import java.lang.Number;
 rule "One"
 	dialect "mvel"
 	when
+		adj : Holder( value == null )
 	then
+		modify( adj ) {
+				setValue( "12" )
+		}
 end

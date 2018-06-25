@@ -1,0 +1,9 @@
+package example.sigsam;
+
+import java.lang.Number;
+
+rule "Two"
+	dialect "mvel"
+	when
+	then
+end

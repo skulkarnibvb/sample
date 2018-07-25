@@ -1,4 +1,4 @@
 Repository Init Content
 =======================
 
-Your project description here sample project.
+The project description goes here.

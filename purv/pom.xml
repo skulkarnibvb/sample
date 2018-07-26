@@ -3,10 +3,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org1</groupId>
-  <artifactId>purv</artifactId>
+  <artifactId>complexSignaling</artifactId>
   <version>1.0</version>
   <packaging>kjar</packaging>
-  <name>purv</name>
+  <name>complexSignaling</name>
   <description>sample project to try out variable mappings between processes</description>
   <repositories>
     <repository>

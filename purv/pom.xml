@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org1</groupId>
   <artifactId>complexSignaling</artifactId>
-  <version>9.0</version>
+  <version>10.0</version>
   <packaging>kjar</packaging>
   <name>complexSignaling</name>
   <description>sample project to try out variable mappings between processes</description>
